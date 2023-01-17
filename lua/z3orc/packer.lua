@@ -2,13 +2,17 @@ return require('packer').startup(function(use)
 	-- Packer can manage itself
 	use 'wbthomason/packer.nvim'
 
+    --Telescope
+
 	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.0',
 		-- or                            , branch = '0.1.x',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 
-	use {'nvim-telescope/telescope-ui-select.nvim' }
+use {'nvim-telescope/telescope-ui-select.nvim' }
+
+    --LSP
 
 	use {
 		'VonHeikemen/lsp-zero.nvim',
@@ -31,5 +35,19 @@ return require('packer').startup(function(use)
 			{'rafamadriz/friendly-snippets'},
 		}
 	}
+
+    use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+
+    -- Autocompletion
+    use {
+        'gelguy/wilder.nvim',
+        config = function()
+            -- config goes here
+        end,
+    }
+
+    use('theprimeagen/harpoon')
+
+    use 'lunarvim/darkplus.nvim'
 
 end)
