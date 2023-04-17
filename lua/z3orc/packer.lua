@@ -10,7 +10,7 @@ return require('packer').startup(function(use)
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 
-use {'nvim-telescope/telescope-ui-select.nvim' }
+    use {'nvim-telescope/telescope-ui-select.nvim' }
 
     --LSP
 
@@ -47,7 +47,9 @@ use {'nvim-telescope/telescope-ui-select.nvim' }
     }
 
     use('theprimeagen/harpoon')
+    use('ThePrimeagen/vim-be-good')
 
     use 'lunarvim/darkplus.nvim'
+    use { "catppuccin/nvim", as = "catppuccin" }
 
 end)
