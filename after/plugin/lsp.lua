@@ -11,3 +11,13 @@ vim.diagnostic.config({
   severity_sort = false,
   float = true,
 })
+
+local cmp = require('cmp')
+local cmp_action = require('lsp-zero').cmp_action()
+
+cmp.setup({
+  mapping = {
+    -- `Enter` key to confirm completion
+    ['<Enter>'] = cmp.mapping.confirm({select = true}),
+  }
+})
