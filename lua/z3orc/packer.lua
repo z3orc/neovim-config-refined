@@ -81,6 +81,7 @@ return require('packer').startup(function(use)
     use('theprimeagen/harpoon')
     use('ThePrimeagen/vim-be-good')
 
+    use {"dikiaap/minimalist", as = "minimalist"}
     use 'lunarvim/darkplus.nvim'
     use { "catppuccin/nvim", as = "catppuccin" }
 end)
